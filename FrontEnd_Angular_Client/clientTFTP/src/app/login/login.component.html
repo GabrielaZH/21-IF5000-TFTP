@@ -13,22 +13,18 @@
             <hr>
             <form class="form-group ">
                 
-                <div class="form-group row">
-                <div class="col-md-4">
+                <div class="form-group col text-center">
                     <input class="form-control" type="text" [(ngModel)]="client.name" name="name" placeholder="Name"/>
                 </div>
-                </div>
+                
                 <br>
-
-                <div class="form-group row">
-                <div class="col-md-4">
+                    <div class="form-group col text-center">
                     <input class="form-control" type="password" [(ngModel)]="client.password"  name="password" placeholder="Password"/>
-                </div>
                 </div>
             
                 <br>
 
-                <div class="form-group">
+                <div class="form-group col text-center">
                 <button type="button" (click)="login()" class="btn btn-success">Accept</button>
             
                
