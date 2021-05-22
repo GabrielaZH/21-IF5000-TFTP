@@ -22,3 +22,10 @@
     z-index: 1;
 }
 
+.btnOption{
+    width: 10em;
+}
+
+.btnFontWhite{
+    color: white;
+}
