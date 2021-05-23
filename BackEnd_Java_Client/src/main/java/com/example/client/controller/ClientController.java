@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.server.ServerErrorException;
 
 import java.sql.SQLDataException;
@@ -22,7 +23,7 @@ import java.util.NoSuchElementException;
 @RequestMapping(path = "/api/client")
 @RestController
 public class ClientController {
-
+    private String userName  ="";
     @Autowired
     private ClientService service;
 
@@ -67,10 +68,20 @@ public class ClientController {
         return new ResponseEntity<Map<String, Object>>( response, HttpStatus.CREATED);
     }
 
+    @RequestMapping(value = "/uploadImage")
+    public ResponseEntity<?> uploadImage(@RequestParam("file") MultipartFile file) //@RequestBody Client client,@RequestParam("file") MultipartFile file
+    {
+        System.out.printf(userName);
+        System.out.printf("file");
+
+        return null;
+    }
+
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
     public ResponseEntity<?> login(@RequestBody Client client)
     {
+        userName = client.getName();
         Client clientRequest = null;
         Map<String,Object> response = new HashMap<>();
         try{

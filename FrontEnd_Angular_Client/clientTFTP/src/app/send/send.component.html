@@ -12,11 +12,11 @@
                 <div class="formulario__grupo col-md-12">
                     <label class="form-label">Image (JPG,PNG,BMP)</label>
                     <img id="image" class="d-block  w-100 rounded-top" style="max-height: 300px">
-                    <input id="imagenFile" onChange="document.getElementById('image').src = window.URL.createObjectURL(this.files[0])" type="file" title="PNG,JPG" class="form-control mt-0" name="image" accept="image/png, .jpg, .bmp">
+                    <input id="imagenFile" (change)="selectFile($event)" onChange="document.getElementById('image').src = window.URL.createObjectURL(this.files[0])" type="file" title="PNG,JPG" class="form-control mt-0" name="image" accept="image/png, .jpg, .bmp">
                 </div>
                 <br/>
                 <div class="col-md-6">
-                    <button type="button"  class="btn btn-success">Send</button>
+                    <button type="button" (click)="upload()"  class="btn btn-success">Upload</button>
                 </div>
             </form>
 
