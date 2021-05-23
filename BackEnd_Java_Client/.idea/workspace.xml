@@ -11,8 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9b6dd661-e779-438f-b018-f4f076220c54" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/send/send.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/send/send.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,6 +307,7 @@
       <workItem from="1621626655281" duration="57000" />
       <workItem from="1621626727224" duration="3328000" />
       <workItem from="1621660099437" duration="1970000" />
+      <workItem from="1621730325610" duration="488000" />
     </task>
     <servers />
   </component>
