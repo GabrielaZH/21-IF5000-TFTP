@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpEvent} from '@angular/common/http';
 import { catchError, map } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { Client } from '../models/client.model';
@@ -32,10 +32,9 @@ export class ClientService {
   return body || { };
 }
 
+
 constructor( private http:HttpClient ) { }
   
-
-
  addClient( client: Client ){
   const url = `${base_url}/client/add`;
   return this.http.post<any>(url, JSON.stringify(client), httpOptions)
@@ -44,7 +43,19 @@ constructor( private http:HttpClient ) { }
     catchError(this.handleError<any>('addClient'))
   );
 }
- 
+
+upload(file: File){
+  let formData: FormData = new FormData();
+  formData.append("file", file);
+
+  const url = `${base_url}/client/uploadImage`;
+  return this.http.post<any>(url, formData)
+  .pipe(
+    map(this.extractData),      
+    catchError(this.handleError<any>('upload'))
+  );
+}
+
 login( client: Client ){
   const url = `${base_url}/client/login`;
   return this.http.post<any>(url, JSON.stringify(client), httpOptions).pipe(

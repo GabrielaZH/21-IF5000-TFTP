@@ -11,7 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9b6dd661-e779-438f-b018-f4f076220c54" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/client/controller/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/send/send.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/send/send.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -308,6 +308,7 @@
       <workItem from="1621626727224" duration="3328000" />
       <workItem from="1621660099437" duration="1970000" />
       <workItem from="1621730325610" duration="488000" />
+      <workItem from="1621741037073" duration="7227000" />
     </task>
     <servers />
   </component>
@@ -325,5 +326,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.example.client.model.Client" memberName="clientId" />
+        <PinnedItemInfo parentTag="java.util.LinkedHashMap$Entry" memberName="value" />
+        <PinnedItemInfo parentTag="com.example.client.model.Client" memberName="name" />
+        <PinnedItemInfo parentTag="java.util.LinkedHashMap$Entry" memberName="key" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
