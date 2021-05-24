@@ -1,5 +1,9 @@
 package com.example.client.controller;
 
+
+
+//import com.example.client.clientTFTP.TFTPClient;
+import com.example.client.clientTFTP.TFTPClient;
 import com.example.client.model.Client;
 import com.example.client.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,16 +11,15 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.server.ServerErrorException;
 
-import java.sql.SQLDataException;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
+
+
+
 
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -69,10 +72,15 @@ public class ClientController {
     }
 
     @RequestMapping(value = "/uploadImage")
-    public ResponseEntity<?> uploadImage(@RequestParam("file") MultipartFile file) //@RequestBody Client client,@RequestParam("file") MultipartFile file
+    public ResponseEntity<?> uploadImage() //@RequestParam("file") MultipartFile file
     {
-        System.out.printf(userName);
-        System.out.printf("file");
+        TFTPClient tftpClient = new TFTPClient();
+        //tftpClient.executeClient("127.0.0.1","zenitsu.jpg","octet", "W");
+
+        tftpClient.executeClient("127.0.0.1","server3.jpg","octet", "R");
+
+        //System.out.printf(userName);
+        //System.out.printf("file");
 
         return null;
     }
