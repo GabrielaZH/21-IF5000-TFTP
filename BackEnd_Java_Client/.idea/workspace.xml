@@ -10,14 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b6dd661-e779-438f-b018-f4f076220c54" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/BackEnd_Java_Server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/TFTPServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/client/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/send/send.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/send/send.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/client/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/client/controller/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/controller/ClientController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -38,18 +51,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BackEnd_Java_Server" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\21-IF5000-TFTP\BackEnd_Java_Client\src\main\java\com\example\client\images" />
       <recent name="D:\Usuarios\Estudiante\Desktop\gabi\UCR\RedesI_2021\Proyecto\src\main\resources\static" />
     </key>
   </component>
@@ -91,7 +107,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat jd" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.61" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:/Program Files/Java/jdk1.8.0_231/jre">
+    <configuration name="Tomcat jd" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.61" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="$PROJECT_DIR$/../../Program Files/Java/jdk1.8.0_231/jre">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Proyecto:war exploded">
@@ -309,6 +325,13 @@
       <workItem from="1621660099437" duration="1970000" />
       <workItem from="1621730325610" duration="488000" />
       <workItem from="1621741037073" duration="7227000" />
+      <workItem from="1621830910241" duration="2402000" />
+      <workItem from="1621833374871" duration="8254000" />
+      <workItem from="1621842347609" duration="334000" />
+      <workItem from="1621842698580" duration="7000" />
+      <workItem from="1621842712499" duration="1132000" />
+      <workItem from="1621844103652" duration="625000" />
+      <workItem from="1621844809076" duration="118000" />
     </task>
     <servers />
   </component>
