@@ -10,15 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b6dd661-e779-438f-b018-f4f076220c54" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/BackEnd_Java_Server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/TFTPServer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Proyecto_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Proyecto_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proyecto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientRRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientRRQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientWRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientWRQ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/client/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/client/clientTFTP/TFTPclientRRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/client/clientTFTP/TFTPclientRRQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/client/clientTFTP/TFTPclientWRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/client/clientTFTP/TFTPclientWRQ.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/client/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/client/controller/ClientController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/clientTFTP/TFTPclientRRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/clientTFTP/TFTPclientRRQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/clientTFTP/TFTPclientWRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/clientTFTP/TFTPclientWRQ.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/controller/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverRRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverRRQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverWRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverWRQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverRRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverRRQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverWRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverWRQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/send/send.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/send/send.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,6 +345,20 @@
       <workItem from="1621842712499" duration="1132000" />
       <workItem from="1621844103652" duration="625000" />
       <workItem from="1621844809076" duration="118000" />
+      <workItem from="1621894458060" duration="7000" />
+      <workItem from="1621894983295" duration="1709000" />
+      <workItem from="1621896792540" duration="471000" />
+      <workItem from="1621897364559" duration="1197000" />
+      <workItem from="1621900020189" duration="1764000" />
+      <workItem from="1621901841100" duration="1767000" />
+      <workItem from="1621903653147" duration="1769000" />
+      <workItem from="1621905469604" duration="1770000" />
+      <workItem from="1621907319127" duration="713000" />
+      <workItem from="1621909148989" duration="1270000" />
+      <workItem from="1621910982647" duration="1771000" />
+      <workItem from="1621913472107" duration="1759000" />
+      <workItem from="1621915290410" duration="1427000" />
+      <workItem from="1621917116725" duration="885000" />
     </task>
     <servers />
   </component>

@@ -10,7 +10,7 @@ class TFTPclientRRQ {
 	protected InetAddress server;
 	protected String fileName;
 	protected String dataMode;
-
+	protected  String path ="C:\\21-IF5000-TFTP\\BackEnd_Java_Client\\src\\main\\java\\com\\example\\client\\images\\";
 	public TFTPclientRRQ(InetAddress ip, String name, String mode) {
 		server = ip;
 		fileName = name;
@@ -20,7 +20,15 @@ class TFTPclientRRQ {
 			DatagramSocket sock = new DatagramSocket();
 			sock.setSoTimeout(2000); // set time out to 2s
 
-			FileOutputStream outFile = new FileOutputStream("C:\\21-IF5000-TFTP\\BackEnd_Java_Client\\src\\main\\java\\com\\example\\client\\images\\"+fileName); //parent folder
+
+			//create folder
+			File newDirectory = new File( path+fileName);
+			if(!newDirectory.exists()) {
+				newDirectory.mkdir();
+			}
+
+
+			FileOutputStream outFile = new FileOutputStream(path+fileName); //parent folder
 			// Send request to server
 			TFTPread reqPak = new TFTPread(fileName, dataMode);
 			reqPak.send(server, 6973, sock);
@@ -32,7 +40,7 @@ class TFTPclientRRQ {
 			int testloss = 1; // test only
 
 			// Process the transfer
-			System.out.println("Downloading");
+			System.out.println("\u001B[32mDownloading\u001B[0m");
 			for (int blkNum = 1, bytesOut = 512; bytesOut == 512; blkNum++) {
 				while (timeoutLimit != 0) {
 					try {

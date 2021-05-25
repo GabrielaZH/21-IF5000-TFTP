@@ -41,6 +41,12 @@ export class SendComponent implements OnInit {
           icon: 'success',
           timer: 1000,
         });
+      }else{
+        Swal.fire({
+          title: 'Sorry, try again!',
+          icon: 'error',
+          timer: 1000,
+        });
       }
     });
   }

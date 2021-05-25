@@ -32,7 +32,7 @@ class TFTPclientWRQ {
 			//check packet type
 			if (sendRsp instanceof TFTPack) {
 				TFTPack Rsp = (TFTPack) sendRsp;
-				System.out.println("--Server ready--\nUploading");
+				System.out.println("\u001B[32m--Server ready--\nUploading\u001B[0m");
 			} else if (sendRsp instanceof TFTPerror) {
 				TFTPerror Rsp = (TFTPerror) sendRsp;
 				source.close();

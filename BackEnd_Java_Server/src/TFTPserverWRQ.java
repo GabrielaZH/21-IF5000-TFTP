@@ -12,9 +12,10 @@ class TFTPserverWRQ extends Thread {
 	protected FileOutputStream outFile;
 	protected TFTPpacket req;
 	protected int timeoutLimit = 5;
-	//protected int testloss=0;
 	protected File saveFile;
 	protected String fileName;
+	protected String folderName;
+	private String path = "C:\\21-IF5000-TFTP\\BackEnd_Java_Server\\images\\";
 
 	// Initialize read request
 	public TFTPserverWRQ(TFTPwrite request) throws TftpException {
@@ -26,8 +27,29 @@ class TFTPserverWRQ extends Thread {
 			host = request.getAddress();
 			port = request.getPort();
 			fileName = request.fileName();
-			//create file object in parent folder
-			saveFile = new File("C:\\21-IF5000-TFTP\\BackEnd_Java_Server\\images\\"+fileName);
+
+
+			//obtain client name
+				String[] tmp = new String[2];
+			    folderName="";
+				for(int i=0;i<fileName.length();i++){
+					if(fileName.charAt(i)=='_'){
+						tmp[0]=fileName.substring(0,i);
+						fileName=tmp[1]=fileName.substring(i+1,fileName.length());
+						folderName=tmp[0];
+						break;
+					}
+				}
+
+			//create folder
+			File newDirectory = new File( path+folderName);
+			if(!newDirectory.exists()) {
+				newDirectory.mkdir();
+			}
+
+			//save image
+			saveFile = new File(path+folderName+ "\\"+fileName);
+
 
 			if (!saveFile.exists()) {
 				outFile = new FileOutputStream(saveFile);
@@ -87,8 +109,8 @@ class TFTPserverWRQ extends Thread {
 					}
 					if(timeoutLimit==0){throw new Exception("Connection failed");}
 				}
-				System.out.println("Transfer completed.(Client " +host +")" );
-				System.out.println("Filename: "+fileName + "\nSHA1 checksum: "+CheckSum.getChecksum("C:\\21-IF5000-TFTP\\BackEnd_Java_Server\\images\\"+fileName)+"\n");
+				System.out.println("\u001B[32mTransfer completed.(Client " +host +")\u001B[0m");
+				System.out.println("Filename: "+fileName + "\nSHA1 checksum: "+CheckSum.getChecksum(path+folderName+"\\"+fileName)+"\n");
 				
 			} catch (Exception e) {
 				TFTPerror ePak = new TFTPerror(1, e.getMessage());

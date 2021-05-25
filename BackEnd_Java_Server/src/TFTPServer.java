@@ -8,19 +8,19 @@ public class TFTPServer {
 		try {
 			//use port 6973
 			DatagramSocket sock = new DatagramSocket(6973);
-			System.out.println("Server Ready.  Port:  " + sock.getLocalPort());
+			System.out.println("\u001B[34mServer Ready.  Port:  " + sock.getLocalPort()+"\u001B[0m");
 
 			// Listen for requests
 			while (true) {
 				TFTPpacket in = TFTPpacket.receive(sock);
 				// receive read request
 				if (in instanceof TFTPread) {
-					System.out.println("Read Request from " + in.getAddress());
+					System.out.println("\u001B[34mRead Request from " + in.getAddress()+"\u001B[0m");
 					TFTPserverRRQ r = new TFTPserverRRQ((TFTPread) in);
 				}
 				// receive write request
 				else if (in instanceof TFTPwrite) {
-					System.out.println("Write Request from " + in.getAddress());
+					System.out.println("\u001B[34mWrite Request from " + in.getAddress()+"\u001B[0m");
 					TFTPserverWRQ w = new TFTPserverWRQ((TFTPwrite) in);
 				}
 			}
