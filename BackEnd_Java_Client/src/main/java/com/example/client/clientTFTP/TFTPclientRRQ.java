@@ -21,13 +21,6 @@ class TFTPclientRRQ {
 			sock.setSoTimeout(2000); // set time out to 2s
 
 
-			//create folder
-			File newDirectory = new File( path+fileName);
-			if(!newDirectory.exists()) {
-				newDirectory.mkdir();
-			}
-
-
 			FileOutputStream outFile = new FileOutputStream(path+fileName); //parent folder
 			// Send request to server
 			TFTPread reqPak = new TFTPread(fileName, dataMode);
@@ -40,7 +33,7 @@ class TFTPclientRRQ {
 			int testloss = 1; // test only
 
 			// Process the transfer
-			System.out.println("\u001B[32mDownloading\u001B[0m");
+			System.out.println("\u001B[34mDownloading\u001B[0m");
 			for (int blkNum = 1, bytesOut = 512; bytesOut == 512; blkNum++) {
 				while (timeoutLimit != 0) {
 					try {
@@ -68,9 +61,7 @@ class TFTPclientRRQ {
 							newPort = p.getPort();
 							// check block num.
 
-							if (/* testloss==20|| */blkNum != p.blockNumber()) { //old data
-								// testloss++;
-								//System.out.println("@testloss loss blkNum " + blkNum);
+							if (blkNum != p.blockNumber()) { //old data
 								throw new SocketTimeoutException();
 							}
 							// everything is fine then write to the file
@@ -104,7 +95,7 @@ class TFTPclientRRQ {
 					throw new TftpException("Connection failed");
 				}
 			}
-			System.out.println("\nDownload Finished.\nFilename: " + fileName);
+			System.out.println("\u001B[32m\nDownload Finished.\u001B[0m\nFilename: " + fileName);
 			System.out.println("SHA1 Checksum: " + CheckSum.getChecksum("C:\\21-IF5000-TFTP\\BackEnd_Java_Client\\src\\main\\java\\com\\example\\client\\images\\"+fileName));
 			
 			outFile.close();

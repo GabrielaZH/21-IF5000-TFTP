@@ -32,7 +32,7 @@ class TFTPclientWRQ {
 			//check packet type
 			if (sendRsp instanceof TFTPack) {
 				TFTPack Rsp = (TFTPack) sendRsp;
-				System.out.println("\u001B[32m--Server ready--\nUploading\u001B[0m");
+				System.out.println("\u001B[34m--Server ready--\nUploading\u001B[0m");
 			} else if (sendRsp instanceof TFTPerror) {
 				TFTPerror Rsp = (TFTPerror) sendRsp;
 				source.close();
@@ -89,7 +89,7 @@ class TFTPclientWRQ {
 			source.close();
 			sock.close();
 			
-			System.out.println("\nUpload finished!\nFilename: "+fileName);
+			System.out.println("\u001B[32m\nUpload finished!\u001B[0m\nFilename: "+fileName);
 			System.out.println("SHA1 Checksum: " + CheckSum.getChecksum("C:\\21-IF5000-TFTP\\BackEnd_Java_Client\\src\\main\\java\\com\\example\\client\\images\\"+fileName));
 
 		} catch (SocketTimeoutException t) {
