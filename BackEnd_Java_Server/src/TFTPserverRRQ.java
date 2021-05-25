@@ -70,12 +70,9 @@ class TFTPserverRRQ extends Thread {
 			try {
 				for (int blkNum = 1; bytesRead == TFTPpacket.maxTftpPakLen; blkNum++) {
 					TFTPdata outPak = new TFTPdata(blkNum, source);
-					/*System.out.println("send block no. " + outPak.blockNumber()); */
 					bytesRead = outPak.getLength();
-					/*System.out.println("bytes sent:  " + bytesRead);*/
 					outPak.send(host, port, sock);
-					/*System.out.println("current op code  " + outPak.get(0)); */
-					
+
 					//wait for the correct ack. if incorrect, retry up to 5 times
 					while (timeoutLimit!=0) { 
 						try {

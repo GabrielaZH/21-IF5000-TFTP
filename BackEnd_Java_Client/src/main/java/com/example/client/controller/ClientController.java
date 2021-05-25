@@ -19,13 +19,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.NoSuchElementException;
-
-
-
+import java.util.*;
 
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -127,29 +121,35 @@ public class ClientController {
 
 
     @RequestMapping(value = "/receiveImage")
-    public  ResponseEntity<?> receiveImage() throws FileNotFoundException {
-
-        userName="pepe";
+    public  List<String> receiveImage() throws FileNotFoundException {
+        userName = "katoche";
         Map<String,Object> response = new HashMap<>();
         //try {
-
             //send file to server using TFTP
+            File folder = new File("C:\\21-IF5000-TFTP\\BackEnd_Java_Server\\images\\" + userName);
+            File[] listOfFiles = folder.listFiles();
             TFTPClient tftpClient = new TFTPClient();
 
-            //tftpClient.executeClient("127.0.0.1","server.jpg","octet", "R");
-            //+"\\"+"prueba2.jpg"
-            tftpClient.executeClient("127.0.0.1",userName,"octet", "R");
+
+            List<String> paths = new ArrayList<String>();
+
+            for (int i = 0; i < listOfFiles.length; i++) {
+                if (listOfFiles[i].isFile()) {
+                    paths.add("C:\\21-IF5000-TFTP\\BackEnd_Java_Client\\src\\main\\java\\com\\example\\client\\images\\"+listOfFiles[i].getName());
+                    tftpClient.executeClient("127.0.0.1",userName+"_"+ listOfFiles[i].getName(),"octet", "R");
+                }
+            }
 
             //delete file
-            /*File images = new File(path+userName);
-            FileUtils.forceDelete(images);
+            //File images = new File(path+userName);
+            //FileUtils.forceDelete(images);
 
-        } catch (IOException e) {
+        /*} catch (IOException e) {
             response.put("error", e.getMessage());
             return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_MODIFIED);
         }*/
 
-        return new ResponseEntity<Map<String, Object>>( response, HttpStatus.CREATED);
+        return paths;
     }
 
 
