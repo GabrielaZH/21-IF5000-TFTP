@@ -1,5 +1,6 @@
 package com.example.client.clientTFTP;
 
+import java.lang.reflect.Field;
 import java.net.*;
 import java.security.MessageDigest;
 import java.io.*;
@@ -11,17 +12,20 @@ class TFTPclientRRQ {
 	protected String fileName;
 	protected String dataMode;
 	protected  String path ="C:\\21-IF5000-TFTP\\BackEnd_Java_Client\\src\\main\\java\\com\\example\\client\\images\\";
+	protected TFTPdata[] imageBytes;
+	protected FileOutputStream outFile;
 	public TFTPclientRRQ(InetAddress ip, String name, String mode) {
 		server = ip;
 		fileName = name;
 		dataMode = mode;
+		imageBytes = new TFTPdata[1000];
+
 
 		try {// Create socket and open output file
 			DatagramSocket sock = new DatagramSocket();
 			sock.setSoTimeout(2000); // set time out to 2s
 
-
-			FileOutputStream outFile = new FileOutputStream(path+fileName); //parent folder
+			outFile = new FileOutputStream(path+fileName); //parent folder
 			// Send request to server
 			TFTPread reqPak = new TFTPread(fileName, dataMode);
 			reqPak.send(server, 6973, sock);
@@ -61,15 +65,24 @@ class TFTPclientRRQ {
 							newPort = p.getPort();
 							// check block num.
 
+							/*
+							ORIGINAL
 							if (blkNum != p.blockNumber()) { //old data
 								throw new SocketTimeoutException();
 							}
+							*/
+							if (imageBytes[p.blockNumber()] != null) { //old data
+								throw new SocketTimeoutException();
+							}else{
+								blkNum = p.blockNumber();
+							}
 							// everything is fine then write to the file
-							bytesOut = p.write(outFile);
+
+							imageBytes[p.blockNumber()] = p;
 							// send ack to the server
 							ack = new TFTPack(blkNum);
 							ack.send(newIP, newPort, sock);
-							// testloss++;
+
 							break;
 						} else
 							throw new TftpException("Unexpected response from server");
@@ -89,6 +102,15 @@ class TFTPclientRRQ {
 							ack.send(newIP, newPort, sock);
 							timeoutLimit--;
 						}
+					}finally {
+						for (int i = 0; i < imageBytes.length ; i++) {
+							if(imageBytes[i]!= null){
+								imageBytes[i].write(outFile);
+							}else{
+								break;
+							}
+						}
+						outFile.close();
 					}
 				}
 				if (timeoutLimit == 0) {
@@ -98,7 +120,7 @@ class TFTPclientRRQ {
 			System.out.println("\u001B[32m\nDownload Finished.\u001B[0m\nFilename: " + fileName);
 			System.out.println("SHA1 Checksum: " + CheckSum.getChecksum("C:\\21-IF5000-TFTP\\BackEnd_Java_Client\\src\\main\\java\\com\\example\\client\\images\\"+fileName));
 			
-			outFile.close();
+
 			sock.close();
 		} catch (IOException e) {
 			System.out.println("IO error, transfer aborted");

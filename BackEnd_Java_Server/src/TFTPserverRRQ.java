@@ -1,7 +1,10 @@
+import sun.plugin.javascript.navig.Array;
+
 import java.net.*;
 import java.security.MessageDigest;
 import java.io.*;
 import java.util.*;
+import java.util.stream.IntStream;
 
 
 class TFTPserverRRQ extends Thread {
@@ -15,6 +18,7 @@ class TFTPserverRRQ extends Thread {
 	protected String fileName;
 	protected String folderName;
 	private String path = "C:\\21-IF5000-TFTP\\BackEnd_Java_Server\\images\\";
+	protected int[] ramdonBlkNum;
 
 	// initialize read request
 	public TFTPserverRRQ(TFTPread request) throws TftpException {
@@ -62,14 +66,32 @@ class TFTPserverRRQ extends Thread {
 			System.out.println("Client start failed:  " + e.getMessage());
 		}
 	}
+	//https://es.stackoverflow.com/questions/38599/crear-n%C3%BAmeros-aleatorios-sin-que-se-repitan
+	public int[] ramdonArray(int size){
+		int[] numerosAleatorios = IntStream.rangeClosed(1, size).toArray();
+
+		Random r = new Random();
+		for (int i = numerosAleatorios.length; i > 0; i--) {
+			int posicion = r.nextInt(i);
+			int tmp = numerosAleatorios[i-1];
+			numerosAleatorios[i - 1] = numerosAleatorios[posicion];
+			numerosAleatorios[posicion] = tmp;
+		}
+		return  numerosAleatorios;
+	}
+
 	//everything is fine, open new thread to transfer file
 	public void run() {
 		int bytesRead = TFTPpacket.maxTftpPakLen;
+		ramdonBlkNum=  ramdonArray(TFTPpacket.maxTftpPakLen);
+		int ramdonBlk = 0;
 		// handle read request
 		if (req instanceof TFTPread) {
 			try {
 				for (int blkNum = 1; bytesRead == TFTPpacket.maxTftpPakLen; blkNum++) {
-					TFTPdata outPak = new TFTPdata(blkNum, source);
+					ramdonBlk = ramdonBlkNum[blkNum-1];
+
+					TFTPdata outPak = new TFTPdata(ramdonBlk, source);
 					bytesRead = outPak.getLength();
 					outPak.send(host, port, sock);
 
@@ -80,13 +102,13 @@ class TFTPserverRRQ extends Thread {
 							if (!(ack instanceof TFTPack)){throw new Exception("Client failed");}
 							TFTPack a = (TFTPack) ack;
 							
-							if(a.blockNumber()!=blkNum){ //check ack
+							if(a.blockNumber()!=ramdonBlk){ //check ack
 								throw new SocketTimeoutException("last packet lost, resend packet");}
 							/*System.out.println("confirm blk num " + a.blockNumber()+" from "+a.getPort());*/
 							break;
 						} 
 						catch (SocketTimeoutException t) {//resend last packet
-							System.out.println("Resent blk " + blkNum);
+							System.out.println("Resent blk " + ramdonBlk);
 							timeoutLimit--;
 							outPak.send(host, port, sock);
 						}
