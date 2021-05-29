@@ -56,6 +56,12 @@ upload(file: File){
   );
 }
 
+getImages(): Observable<any>{
+  const url = `${base_url}/client/getImages`;
+  return this.http.get(url);
+}
+
+
 login( client: Client ){
   const url = `${base_url}/client/login`;
   return this.http.post<any>(url, JSON.stringify(client), httpOptions).pipe(
