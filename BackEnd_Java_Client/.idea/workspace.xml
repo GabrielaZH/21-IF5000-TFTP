@@ -10,17 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b6dd661-e779-438f-b018-f4f076220c54" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Proyecto_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Proyecto_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Proyecto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Proyecto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/client/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientRRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientRRQ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/client/clientTFTP/TFTPclientRRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/client/clientTFTP/TFTPclientRRQ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/client/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/client/controller/ClientController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/clientTFTP/TFTPclientRRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/clientTFTP/TFTPclientRRQ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/controller/ClientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/controller/ClientController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverRRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverRRQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverRRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverRRQ.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,19 +100,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat jd">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="generated-requests#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -362,6 +346,12 @@
       <workItem from="1621914558529" duration="1196000" />
       <workItem from="1621919176403" duration="6636000" />
       <workItem from="1622242713730" duration="11864000" />
+      <workItem from="1622260326623" duration="1792000" />
+      <workItem from="1622262240399" duration="1793000" />
+      <workItem from="1622264086420" duration="1346000" />
+      <workItem from="1622265944278" duration="1754000" />
+      <workItem from="1622267944354" duration="1772000" />
+      <workItem from="1622269813366" duration="260000" />
     </task>
     <servers />
   </component>
