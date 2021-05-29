@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientService } from '../services/client.service';
 
 @Component({
   selector: 'app-receive',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReceiveComponent implements OnInit {
 
-  constructor() { }
+  public images:any = [];
+
+  constructor(private clientService:ClientService) { }
 
   ngOnInit(): void {
+    this.clientService.getImages().subscribe(response =>{
+      this.images = response;
+    });
   }
 
 }
