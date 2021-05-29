@@ -10,12 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b6dd661-e779-438f-b018-f4f076220c54" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientRRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientRRQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/client/clientTFTP/TFTPclientRRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/client/clientTFTP/TFTPclientRRQ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/clientTFTP/TFTPclientRRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/clientTFTP/TFTPclientRRQ.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverRRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverRRQ.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverRRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverRRQ.java" afterDir="false" />
     </list>
@@ -352,6 +348,9 @@
       <workItem from="1622265944278" duration="1754000" />
       <workItem from="1622267944354" duration="1772000" />
       <workItem from="1622269813366" duration="260000" />
+      <workItem from="1622283098203" duration="5000" />
+      <workItem from="1622283164067" duration="3000" />
+      <workItem from="1622283173686" duration="1209000" />
     </task>
     <servers />
   </component>

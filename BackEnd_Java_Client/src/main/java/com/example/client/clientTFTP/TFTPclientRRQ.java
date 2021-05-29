@@ -65,22 +65,14 @@ class TFTPclientRRQ {
 							newPort = p.getPort();
 							// check block num.
 
-							/*
-							ORIGINAL
-							if (blkNum != p.blockNumber()) { //old data
-								throw new SocketTimeoutException();
-							}
-							*/
-							if (imageBytes[p.blockNumber()] != null) { //old data
-								throw new SocketTimeoutException();
-							}else{
-								blkNum = p.blockNumber();
-							}
-							// everything is fine then write to the file
+//							if (blkNum != p.blockNumber()) { //old data
+//								throw new SocketTimeoutException();
+//							}
 
-							imageBytes[p.blockNumber()] = p;
-							// send ack to the server
-							ack = new TFTPack(blkNum);
+							// everything is fine then write to the file
+							bytesOut = p.write(outFile);
+//							// send ack to the server
+							ack = new TFTPack(p.blockNumber());
 							ack.send(newIP, newPort, sock);
 
 							break;
@@ -90,27 +82,18 @@ class TFTPclientRRQ {
 					// #######handle time out
 					catch (SocketTimeoutException t) {
 						// no response to read request, try again
-						if (blkNum == 1) { 
+						if (blkNum == 1) {
 							System.out.println("failed to reach the server");
 							reqPak.send(server, 6973, sock);
 							timeoutLimit--;
-						} 
+						}
 						// no response to the last ack
-						else { 
+						else {
 							System.out.println("connecion time out, resend last ack. timeoutlimit left=" + timeoutLimit);
 							ack = new TFTPack(blkNum - 1);
 							ack.send(newIP, newPort, sock);
 							timeoutLimit--;
 						}
-					}finally {
-						for (int i = 0; i < imageBytes.length ; i++) {
-							if(imageBytes[i]!= null){
-								imageBytes[i].write(outFile);
-							}else{
-								break;
-							}
-						}
-						outFile.close();
 					}
 				}
 				if (timeoutLimit == 0) {
@@ -119,7 +102,8 @@ class TFTPclientRRQ {
 			}
 			System.out.println("\u001B[32m\nDownload Finished.\u001B[0m\nFilename: " + fileName);
 			System.out.println("SHA1 Checksum: " + CheckSum.getChecksum("C:\\21-IF5000-TFTP\\BackEnd_Java_Client\\src\\main\\java\\com\\example\\client\\images\\"+fileName));
-			
+
+			outFile.close();
 
 			sock.close();
 		} catch (IOException e) {
