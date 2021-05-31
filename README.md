@@ -39,9 +39,9 @@ the sending in the same way.
 - Save proyect in "C:" disk.
 - SQL Management Studio 15.0.18369.0
 - IntelliJ IDEA 2020.3.3 
-- configured a server (Tomcat preferably)
+- Configured a server (Tomcat preferably)
 - Environment variables configured for Java (jre1.8.0_231 y jdk1.8.0_231)
-- jdk1.8.0_261
+- Java configured jdk1.8.0_261
 - Angular cli 12.0.1
 - Visual Studio Code 1.56.2
 
