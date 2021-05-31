@@ -88,14 +88,16 @@ class TFTPserverWRQ extends Thread {
 								TFTPdata p = (TFTPdata) inPak;
 								/*System.out.println("incoming data " + p.blockNumber());*/
 								// check blk num
-								if (/*testloss==20||*/p.blockNumber() != blkNum) { //expect to be the same
+									/*
+									if (p.blockNumber() != blkNum) { //expect to be the same
 									//System.out.println("loss. testloss="+testloss+"timeoutLimit="+timeoutLimit);
 									//testloss++;
 									throw new SocketTimeoutException();
 								}
+								*/
 								//write to the file and send ack
 								bytesOut = p.write(outFile);
-								TFTPack a = new TFTPack(blkNum);
+								TFTPack a = new TFTPack(p.blockNumber());
 								a.send(host, port, sock);
 								//testloss++;
 								break;
@@ -111,7 +113,7 @@ class TFTPserverWRQ extends Thread {
 				}
 				System.out.println("\u001B[32mTransfer completed.(Client " +host +")\u001B[0m");
 				System.out.println("Filename: "+fileName + "\nSHA1 checksum: "+CheckSum.getChecksum(path+folderName+"\\"+fileName)+"\n");
-				
+
 			} catch (Exception e) {
 				TFTPerror ePak = new TFTPerror(1, e.getMessage());
 				try {
