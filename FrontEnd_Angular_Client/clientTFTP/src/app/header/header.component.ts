@@ -19,7 +19,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.client = this.clientService.client;
-    console.log( this.clientService.client);
   }
 
   logout(){

@@ -37,16 +37,18 @@ export class SendComponent implements OnInit {
     this.clientService.upload(this.file).subscribe((result) => {
       if(result){
         Swal.fire({
-          title: 'Upload',
+          title: 'Uploaded',
           icon: 'success',
           timer: 1000,
         });
+        return true;
       }else{
         Swal.fire({
           title: 'Sorry, try again!',
           icon: 'error',
           timer: 1000,
         });
+        return false;
       }
     });
   }
