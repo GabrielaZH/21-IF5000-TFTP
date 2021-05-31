@@ -10,18 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b6dd661-e779-438f-b018-f4f076220c54" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientWRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientWRQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/client/clientTFTP/TFTPclientWRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/client/clientTFTP/TFTPclientWRQ.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/clientTFTP/TFTPclientWRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/clientTFTP/TFTPclientWRQ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/prueba13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/prueba14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/pruebaFina12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/pruebaFinal.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pruebaFinal2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverWRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverWRQ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverWRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverWRQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/katoche/pg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/katoche/pg5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/katoche/pg6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/katoche/tan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/prueba.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/prueba10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/prueba2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/prueba3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/prueba9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe2/prueba5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe2/prueba6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe2/prueba7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/server2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/images/wall1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/receive/receive.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/receive/receive.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/send/send.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/send/send.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/send/send.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../FrontEnd_Angular_Client/clientTFTP/src/app/send/send.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +74,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BackEnd_Java_Server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -366,6 +375,8 @@
       <workItem from="1622332137454" duration="1665000" />
       <workItem from="1622333841301" duration="1777000" />
       <workItem from="1622335707791" duration="452000" />
+      <workItem from="1622490247418" duration="1490000" />
+      <workItem from="1622493320858" duration="228000" />
     </task>
     <servers />
   </component>
@@ -389,7 +400,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientWRQ.java</url>
-          <line>22</line>
+          <line>23</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
