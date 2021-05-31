@@ -6,6 +6,7 @@ import java.util.*;
 
 
 class TFTPclientWRQ {
+	protected DatagramSocket sock;
 	protected InetAddress server;
 	protected String fileName;
 	protected String dataMode;
@@ -15,7 +16,7 @@ class TFTPclientWRQ {
 		dataMode = mode;
 		try {
 			// Create socket and open output file
-			DatagramSocket sock = new DatagramSocket();
+			sock = new DatagramSocket();
 			sock.setSoTimeout(2000);
 			int timeoutLimit = 5;
 
@@ -41,10 +42,21 @@ class TFTPclientWRQ {
 
 			int bytesRead = TFTPpacket.maxTftpPakLen;
 
+			int[] numerosAleatorios = new int[10000];
+			for (int i = 0; i < numerosAleatorios.length; i++) {
+				numerosAleatorios[i] = i;
+			}
+			Random r = new Random();
+			for (int i = numerosAleatorios.length; i > 0; i--) {
+				int posicion = r.nextInt(i);
+				int tmp = numerosAleatorios[i-1];
+				numerosAleatorios[i - 1] = numerosAleatorios[posicion];
+				numerosAleatorios[posicion] = tmp;
+			}
 			// Process the transfer
 
 			for (int blkNum = 1; bytesRead == TFTPpacket.maxTftpPakLen; blkNum++) {
-				TFTPdata outPak = new TFTPdata(blkNum, source);
+				TFTPdata outPak = new TFTPdata(numerosAleatorios[blkNum-1], source);
 				/*System.out.println("block no. " + outPak.blockNumber());*/
 				bytesRead = outPak.getLength();
 				outPak.send(server, port, sock); // send the packet
@@ -68,14 +80,14 @@ class TFTPclientWRQ {
 						/*System.out.println("got response from server");*/
 						
 						// receive ack to former packet, resent
-						if (a.blockNumber() != blkNum) {
+						if (a.blockNumber() !=numerosAleatorios[blkNum-1]) {
 							System.out.println("Last packet lost, resend packet");
 							throw new SocketTimeoutException("Last packet lost, resend packet");
 						}
 						/*System.out.println("response blk no. " + a.blockNumber());*/
 						break;
 					} catch (SocketTimeoutException t0) {
-						System.out.println("Resend blk " + blkNum);
+						System.out.println("Resend blk " + numerosAleatorios[blkNum-1]);
 						outPak.send(server, port, sock); // resend the last
 															// packet
 						timeoutLimit--;

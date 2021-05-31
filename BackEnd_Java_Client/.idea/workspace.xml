@@ -11,9 +11,17 @@
   <component name="ChangeListManager">
     <list default="true" id="9b6dd661-e779-438f-b018-f4f076220c54" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientRRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientRRQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverRRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverRRQ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverRRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverRRQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientWRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientWRQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/client/clientTFTP/TFTPclientWRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/client/clientTFTP/TFTPclientWRQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/clientTFTP/TFTPclientWRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/demo-0.0.1-SNAPSHOT/WEB-INF/classes/com/example/client/clientTFTP/TFTPclientWRQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/prueba13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/prueba14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/pruebaFina12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pepe/pruebaFinal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/images/pruebaFinal2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverWRQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/out/production/BackEnd_Java_Server/TFTPserverWRQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverWRQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEnd_Java_Server/src/TFTPserverWRQ.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,6 +359,13 @@
       <workItem from="1622283098203" duration="5000" />
       <workItem from="1622283164067" duration="3000" />
       <workItem from="1622283173686" duration="1209000" />
+      <workItem from="1622327338325" duration="758000" />
+      <workItem from="1622328144633" duration="1013000" />
+      <workItem from="1622329212524" duration="1204000" />
+      <workItem from="1622330843967" duration="1260000" />
+      <workItem from="1622332137454" duration="1665000" />
+      <workItem from="1622333841301" duration="1777000" />
+      <workItem from="1622335707791" duration="452000" />
     </task>
     <servers />
   </component>
@@ -370,6 +385,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/client/clientTFTP/TFTPclientWRQ.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.example.client.model.Client" memberName="clientId" />
