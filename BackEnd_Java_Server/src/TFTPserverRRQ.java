@@ -87,7 +87,7 @@ class TFTPserverRRQ extends Thread {
 	public void run() {
 		int bytesRead = TFTPpacket.maxTftpPakLen;
 
-		int[] numerosAleatorios = new int[10000];
+		int[] numerosAleatorios = new int[30000];
 		for (int i = 0; i < numerosAleatorios.length; i++) {
 			numerosAleatorios[i] = i;
 		}
