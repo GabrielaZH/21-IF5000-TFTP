@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+
+
+<div class="container mt-5">
+    <div class="card bg-light">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center"></h4>
+            <h2 class="text-center">Send images</h2>
+            <hr>
+            <form>
+                <div class="formulario__grupo col-md-12">
+                    <label class="form-label">Image (JPG,PNG,BMP)</label>
+                    <img id="image" class="d-block  w-100 rounded-top" style="max-height: 300px; cursor: pointer;">
+                    <input id="imagenFile" (change)="selectFile($event)" onChange="document.getElementById('image').src = window.URL.createObjectURL(this.files[0])" type="file" title="PNG,JPG" class="form-control mt-0" name="image" accept="image/png, .jpg, .bmp">
+                </div>
+                <br/>
+                <div class="col-md-6">
+                    <button type="button" (click)="upload()"  class="btn btn-success">Upload</button>
+                </div>
+            </form>
+
+        </article>
+    </div>
+
+    <br>
+</div>
